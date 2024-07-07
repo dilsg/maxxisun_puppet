@@ -1,0 +1,19 @@
+- resource: http://192.168.178.198/maxxi.html
+  scan_interval: 20
+  sensor:
+    - unique_id: pv_prod
+      name: PV Produktion
+      select: "body > app-root > app-user > div > app-maxxisun-now > div > div > div > div > div:nth-child(2) > div:nth-child(1) > div > div.bottom-card"
+      value_template: '{{ value.split("W")[0] }}'
+      unit_of_measurement: "W"
+     - unique_id: pv_stand_bat
+      name: PV StandBatterie
+      select: "body > app-root > app-user > div > app-maxxisun-now > div > div > div > div > div:nth-child(2) > div:nth-child(2) > div > div.bottom-card > b"
+      value_template: '{{ value.split("Wh")[0] }}'
+      unit_of_measurement: "Wh"      
+    - unique_id: pv_verbrauch
+      name: PV Verbrauch Haus
+      select: "body > app-root > app-user > div > app-maxxisun-now > div > div > div > div > div:nth-child(2) > div:nth-child(3) > div > div.bottom-card > b"
+      value_template: '{{ value.split("W")[0] }}'
+      unit_of_measurement: "W"      
+ 
