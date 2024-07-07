@@ -2,19 +2,19 @@
 
 Using of puppeteer for maxxissun.app for home assistant
 
-First install puppeteer
+First install puppeteer (here on 192.168.178.198)
 
-node get_maxxi_login.js generates a static html-page of the maxxisun.app-website
+<code>node get_maxxi_login.js</code> generates a static html-page of the maxxisun.app-website
 
-this page is writen to /var/www/html for a local apache2-server
+this page is written to /var/www/html for a local apache2-server on 192.168.178.198
 
-in home assistant with multiscrape we can find the interessting values of maxxisun.app
+within home assistant we can find the interessting values of maxxisun.app using multiscrape
 
 #
 
 we start "node get_maxxi_login.js" via crontab every 2 minutes with
 
-*/2 * * * * /usr/bin/node /home/pi/puppeteer-docker-RPi/get_maxxi_login.js
+<code>*/2 * * * * /usr/bin/node /home/pi/puppeteer-docker-RPi/get_maxxi_login.js</code>
 
 #
 
