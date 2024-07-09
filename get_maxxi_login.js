@@ -1,7 +1,7 @@
 /**
- * @name get list of links
+ * @name login to maxxsun.app Site and write status-page(js) to html-page
  *
- * @desc Scrapes Hacker News for links on the home page and returns the top 10
+ * @desc 
  */
 const puppeteer = require('puppeteer');
 (async() => {
@@ -17,9 +17,9 @@ const puppeteer = require('puppeteer');
   const page = await browser.newPage()
   await page.tracing.start({
     path: 'trace.json',
-    categories: ['devtools.timeline']
+    categories: ['maxxisun']
   })
-//  await page.goto('https://news.ycombinator.com/news')
+//  
   await page.setViewport({ width: 1200, height: 800 })
   await page.goto('https://maxxisun.app')
 
@@ -33,13 +33,9 @@ const puppeteer = require('puppeteer');
   await page.type("input[formcontrolname=email]", "user@mail.xyz");
   await page.type("input[formcontrolname=ccu]", "MAXXI-1234567-1234");
   await page.click('[class^="mat-mdc-button"]');
-// body > app-root > app-login > div.container.login-container > div > div:nth-child(4) > button
-
 
   await page.waitForNavigation(); // <------------------------- Wait for Naviga>
   await page.screenshot({path: 'maxxi.png'});
-
-
 
   const html1 = await page.content();
   console.log(html1)
@@ -50,7 +46,6 @@ const puppeteer = require('puppeteer');
 
 
 
-// ... write to file
   await page.tracing.stop()
   await browser.close()
 })()
