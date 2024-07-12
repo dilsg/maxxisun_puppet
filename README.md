@@ -20,3 +20,4 @@ we start "node get_maxxi_login.js" via crontab every 2 minutes with
 
 on home assistant we have a file multiscrape.yaml (included in configuration.yaml) for scraping the values
 
+It is not optimal but it works. 
