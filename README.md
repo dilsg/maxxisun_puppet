@@ -14,7 +14,7 @@ within home assistant we can find the interessting values of maxxisun.app using 
 
 we start "node get_maxxi_login.js" via crontab every 2 minutes with
 
-<code>*/2 * * * * /usr/bin/node /home/pi/puppeteer-docker-RPi/get_maxxi_login.js</code>
+<code>*/2 * * * * /usr/bin/node /home/pi/puppeteer/get_maxxi_login.js</code>
 
 #
 
